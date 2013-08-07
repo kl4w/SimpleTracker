@@ -49,6 +49,9 @@ namespace SimpleTracker
 
 					// Save to mappings.
 					Mappings[e.TorrentPath] = trackable;
+
+					// Log.
+					Console.WriteLine("Added {0}", e.TorrentPath);
 				}
 				catch (Exception exception)
 				{
@@ -69,6 +72,9 @@ namespace SimpleTracker
 
 					// Remove from mappings.
 					Mappings.TryRemove(e.TorrentPath, out trackable);
+
+					// Log.
+					Console.WriteLine("Removed {0}", e.TorrentPath);
 				}
 				catch(Exception exception)
 				{
