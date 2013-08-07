@@ -24,6 +24,7 @@ namespace SimpleTracker
 
 			// Make the tracker.
 			Tracker = new Tracker ();
+			Tracker.AnnounceInterval = new TimeSpan (0, 1, 0);
 			Tracker.AllowUnregisteredTorrents = true;
 			Tracker.RegisterListener (listener);
 
