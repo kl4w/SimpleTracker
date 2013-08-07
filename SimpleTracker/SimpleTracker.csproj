@@ -32,10 +32,24 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="NDesk.Options">
+      <HintPath>..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="ManyConsole">
+      <HintPath>..\packages\ManyConsole.0.4.2.16\lib\ManyConsole.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoTorrent">
+      <HintPath>..\packages\MonoTorrent.0.9.0\lib\net20\MonoTorrent.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleTracker.cs" />
+    <Compile Include="RunCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
 </Project>
